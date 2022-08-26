@@ -1,5 +1,9 @@
 package br.com.atividadepet.MeuPet.dao;
 
-public interface IAnimalDao {
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.atividadepet.MeuPet.model.Animal;
+
+public interface IAnimalDao extends CrudRepository<Animal, Integer>{
 
 }

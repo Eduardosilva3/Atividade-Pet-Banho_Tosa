@@ -1,5 +1,9 @@
 package br.com.atividadepet.MeuPet.dao;
 
-public interface IOrdemDao {
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.atividadepet.MeuPet.model.OrdemServico;
+
+public interface IOrdemDao extends CrudRepository<OrdemServico, Integer>{
 
 }

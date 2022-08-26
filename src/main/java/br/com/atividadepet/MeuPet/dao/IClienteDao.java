@@ -1,5 +1,9 @@
 package br.com.atividadepet.MeuPet.dao;
 
-public interface IClienteDao {
+import org.springframework.data.repository.CrudRepository;
+
+import br.com.atividadepet.MeuPet.model.Cliente;
+
+public interface IClienteDao extends CrudRepository<Cliente, Integer>{
 
 }
