@@ -2,6 +2,9 @@ package br.com.atividadepet.MeuPet.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -10,6 +13,10 @@ import javax.persistence.Table;
 @Table(name = "animal")
 public class Animal {
 		
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		@Column(name = "id_animal")
+		private Integer id_animal;
 		@Column(name = "nome")
 		private String nome;
 		
@@ -17,7 +24,7 @@ public class Animal {
 		private Integer idade;
 		
 		@Column(name ="peso")
-		private double peso;
+		private Double peso;
 		
 		@ManyToOne
 		@JoinColumn(name = "id_cliente")
