@@ -10,4 +10,5 @@ public interface IAnimalService {
 	
 	public ArrayList<Animal> buscarTodos();
 	public Animal criarNovo(Animal novo);
+	public void deletarAnimal(Integer id);
 }

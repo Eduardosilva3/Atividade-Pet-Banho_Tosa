@@ -25,5 +25,11 @@ public class OrdemService implements IOrdemService {
 		// TODO Auto-generated method stub
 		return dao.save(novo);
 	}
+	
+	@Override
+	public void deletarAnimal(Integer id) {
+		dao.deleteById(id);
+		
+	}
 
 }

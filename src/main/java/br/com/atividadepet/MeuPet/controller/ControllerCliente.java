@@ -1,5 +1,6 @@
 package br.com.atividadepet.MeuPet.controller;
 
+
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,17 +12,25 @@ import org.springframework.web.bind.annotation.RestController;
 
 import br.com.atividadepet.MeuPet.model.Cliente;
 import br.com.atividadepet.MeuPet.service.IClienteService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+
 
 @RestController
+
+@Api(value = "cliente")
 public class ControllerCliente {
 	
 	@Autowired
 	private IClienteService service;
 	
+	
 	@GetMapping("/cliente")
+	@ApiOperation(value = "Buscar Cliente")
 	public ArrayList<Cliente> buscarTodos(){
 		return service.buscarTodos();
 	}
+	
 	
 	@PostMapping("/cliente")
 	public ResponseEntity<Cliente> cadastrarCliente(@RequestBody Cliente novo){

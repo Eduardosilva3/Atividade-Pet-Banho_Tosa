@@ -25,4 +25,10 @@ public class AnimalService implements IAnimalService{
 		return dao.save(novo);
 	}
 
+	@Override
+	public void deletarAnimal(Integer id) {
+		dao.deleteById(id);
+		
+	}
+
 }

@@ -30,5 +30,46 @@ public class OrdemServico {
 		
 		@Column(name = "hora_saida")
 		private String horaSaida;
+
+		public Integer getIdOrdem() {
+			return idOrdem;
+		}
+
+		public void setIdOrdem(Integer idOrdem) {
+			this.idOrdem = idOrdem;
+		}
+
+		public Cliente getCliente() {
+			return cliente;
+		}
+
+		public void setCliente(Cliente cliente) {
+			this.cliente = cliente;
+		}
+
+		public Double getValor() {
+			return valor;
+		}
+
+		public void setValor(Double valor) {
+			this.valor = valor;
+		}
+
+		public String getHoraEntrada() {
+			return horaEntrada;
+		}
+
+		public void setHoraEntrada(String horaEntrada) {
+			this.horaEntrada = horaEntrada;
+		}
+
+		public String getHoraSaida() {
+			return horaSaida;
+		}
+
+		public void setHoraSaida(String horaSaida) {
+			this.horaSaida = horaSaida;
+		}
+		
 		
 }

@@ -9,6 +9,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "animal")
 public class Animal {
@@ -17,6 +19,7 @@ public class Animal {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		@Column(name = "id_animal")
 		private Integer id_animal;
+		
 		@Column(name = "nome")
 		private String nome;
 		
@@ -28,7 +31,21 @@ public class Animal {
 		
 		@ManyToOne
 		@JoinColumn(name = "id_cliente")
+		@JsonIgnoreProperties("listAnimal")
 		private Cliente cliente;
+		
+		
+		public Integer getId_animal() {
+			return id_animal;
+		}
+
+		public void setId_animal(Integer id_animal) {
+			this.id_animal = id_animal;
+		}
+
+		public void setPeso(Double peso) {
+			this.peso = peso;
+		}
 
 		public String getNome() {
 			return nome;

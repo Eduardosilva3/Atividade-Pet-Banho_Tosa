@@ -8,4 +8,5 @@ import br.com.atividadepet.MeuPet.model.OrdemServico;
 public interface IOrdemService {
 	public ArrayList<OrdemServico> buscarTodos();
 	public OrdemServico criarNovo(OrdemServico novo);
+	public void deletarAnimal(Integer id);
 }
